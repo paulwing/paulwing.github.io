@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://paulwing.github.io/index.html">
 <meta property="og:site_name" content="启式空间">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="paul_wing">
+<meta property="article:author" content="张弛有度">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="启式空间" type="application/atom+xml">
@@ -75,10 +75,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-对webpack的几个概念的直观理解" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/10/23/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2022-10-22T17:54:19.024Z" itemprop="datePublished">2022-10-23</time>
+    <a href="/2022/10/23/%E5%AF%B9webpack%E7%9A%84%E5%87%A0%E4%B8%AA%E6%A6%82%E5%BF%B5%E7%9A%84%E7%9B%B4%E8%A7%82%E7%90%86%E8%A7%A3/" class="article-date">
+  <time class="dt-published" datetime="2022-10-22T16:23:46.000Z" itemprop="datePublished">2022-10-23</time>
 </a>
     
   </div>
@@ -89,7 +89,151 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/10/23/hello-world/">Hello World</a>
+      <a class="p-name article-title" href="/2022/10/23/%E5%AF%B9webpack%E7%9A%84%E5%87%A0%E4%B8%AA%E6%A6%82%E5%BF%B5%E7%9A%84%E7%9B%B4%E8%A7%82%E7%90%86%E8%A7%A3/">对webpack的几个概念的直观理解</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>loader：将各类型的文件转为webpack能处理的有效模块（module）</p>
+<p>plugin：处理范围更广的任务，例如打包优化、压缩等</p>
+<p>module：程序的离散功能块，一个文件对应一个module</p>
+<p>chunk：<font color=red>若干module打成的包</font>，对应入口文件，一般生成一个文件</p>
+<p>compiler：创建compilation，启动编译并生成最终js，并监测文件系统的变化，核心方法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">run</span><br><span class="line">compile</span><br><span class="line">emitAssets</span><br></pre></td></tr></table></figure>
+<p>compilation：组织打包具体过程，包括生成module、组织模块间的依赖、封装、生成asset等并存放重要的chunk、module、assets等，核心方法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">addEntry</span><br><span class="line">_addModuleClain</span><br><span class="line">addModuleDependencied</span><br><span class="line">buildModule</span><br><span class="line">seal</span><br><span class="line">createChunkAssets</span><br></pre></td></tr></table></figure>
+<p>来自：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/yanze/p/7999441.html">炎泽的博客</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://paulwing.github.io/2022/10/23/%E5%AF%B9webpack%E7%9A%84%E5%87%A0%E4%B8%AA%E6%A6%82%E5%BF%B5%E7%9A%84%E7%9B%B4%E8%A7%82%E7%90%86%E8%A7%A3/" data-id="cl9kax4wl0001vsgpdp5ic65p" data-title="对webpack的几个概念的直观理解" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/" rel="tag">webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BC%96%E8%AF%91/" rel="tag">编译</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-正则表达式零宽断言相关理解" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/08/21/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E9%9B%B6%E5%AE%BD%E6%96%AD%E8%A8%80%E7%9B%B8%E5%85%B3%E7%90%86%E8%A7%A3/" class="article-date">
+  <time class="dt-published" datetime="2018-08-20T20:14:33.000Z" itemprop="datePublished">2018-08-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2018/08/21/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E9%9B%B6%E5%AE%BD%E6%96%AD%E8%A8%80%E7%9B%B8%E5%85%B3%E7%90%86%E8%A7%A3/">正则表达式零宽断言相关理解</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>先来看一段代码(c#):</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">foreach (Match m in Regex.Matches(&quot;abcdeAcf&quot;, @&quot;\w?(?=c)&quot;, RegexOptions.None))</span><br><span class="line">&#123;</span><br><span class="line">    Response.Write(m.Value + &quot;&lt;br/&gt;&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面这段代码输入结果估计很容易就能得出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">b  </span><br><span class="line"></span><br><span class="line">A</span><br></pre></td></tr></table></figure>
+<p>现在把代码中的正则表达式改一下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\w?(?&lt;=c)</span><br></pre></td></tr></table></figure>
+<p>结果会是什么呢？我一开始是懵逼的。试了下，结果是这样的：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">c  </span><br><span class="line"></span><br><span class="line">c</span><br></pre></td></tr></table></figure>
+<p>看到结果，更懵逼了。直到看到了下边的解释：</p>
+<p>“你的字符串（其实）为 ‘<font color=red>空字符</font>a<font color=red>空字符</font>b<font color=red>空字符</font>c<font color=red>空字符</font>d<font color=red>空字符</font>e<font color=red>空字符</font>A<font color=red>空字符</font>c<font color=red>空字符</font>f<font color=red>空字符</font>‘<br><br /><br>说明：(?&lt;&#x3D;前缀&lt;只参与匹配不显示&gt;)目标字符串(?&#x3D;后缀&lt;只参与匹配不显示&gt;)<br>你的那个第二种情况不用说了<br>匹配结果为两个<br>b(c)<br>A(c)<br>满足\w?(紧接着一个不显示的c)<br>括号里面的不显示 只参与匹配<br><br /><br>第一种情况 你一共有四个输出结果<br>c<br><br /><font color=red>空字符</font>(cd之间)<br>c<br><br /><font color=red>空字符</font>(cA之间)<br>你的正则【\w?(?&lt;&#x3D;c&lt;空字符前缀&gt;)<font color=red>空字符</font>】意思就是【一个字符(一个只参与匹配不参与显示的c&lt;空字符前缀&gt;)<font color=red>空字符</font>】<br>【一个可以出现可以不出现的字符 中间一个不显示的c <font color=red>空字符</font>】<br>因为上面我说了 (?&lt;&#x3D;XXX) 是作为前缀使用的 <font color=red>而你正则后面没有指定字符</font> 那么那就用空字符作为前缀 就像我上面列出来的说明一样<br>开始匹配<br>匹配a只满足\w? 然后需要一个<font color=red>空字符</font>的前缀c a!&#x3D;c &#x3D;&gt; 不满足<br>匹配b只满足\w? 然后需要一个<font color=red>空字符</font>的前缀c b!&#x3D;c &#x3D;&gt; 不满足<br>匹配c满足\w? 然后需要一个空字符的前缀c c&#x3D;c &#x3D;&gt; 满足<br>注意 上面你的原始字符串之间都有<font color=red>空字符</font>只是不满足条件 就没有列出来(正则会把字符两遍认为有一个<font color=red>空字符</font>)<br>然后原始字符串c后面的一个<font color=red>空字符</font> 满足你正则里面的 <font color=red>空字符</font> 并且前面是一个不需要显示的c而再前面是\w?(?表示可以不出现) 所以满足条件【正则从右往左看匹配容易理解】<br>后面同理<br>”</p>
+<p>最后附一个本人写的格式化带小数点的数字的正则（主要利用了零宽断言）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">replace(/(?&lt;!(\d)?\.(\d)*)(\d)(?=(\d&#123;3&#125;)+(\.|\b))/g, &#x27;$3,&#x27;)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://paulwing.github.io/2018/08/21/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E9%9B%B6%E5%AE%BD%E6%96%AD%E8%A8%80%E7%9B%B8%E5%85%B3%E7%90%86%E8%A7%A3/" data-id="cl9kax4wr0005vsgpav1eafx6" data-title="正则表达式零宽断言相关理解" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/" rel="tag">js</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-快速排序算法js实现（双路快排）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/08/10/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95js%E5%AE%9E%E7%8E%B0%EF%BC%88%E5%8F%8C%E8%B7%AF%E5%BF%AB%E6%8E%92%EF%BC%89/" class="article-date">
+  <time class="dt-published" datetime="2018-08-10T02:37:16.000Z" itemprop="datePublished">2018-08-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2018/08/10/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95js%E5%AE%9E%E7%8E%B0%EF%BC%88%E5%8F%8C%E8%B7%AF%E5%BF%AB%E6%8E%92%EF%BC%89/">快速排序算法js实现（双路快排）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<center><font size=5>代码如下</font></center>
+</blockquote>
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">function quickSort(arr, a, b)&#123;</span><br><span class="line">	var left = a,right = b;</span><br><span class="line">	var flagIndex = left;</span><br><span class="line">	if (a &gt;= b) &#123;</span><br><span class="line">		return;</span><br><span class="line">	&#125;</span><br><span class="line">	while (left &lt; right) &#123;</span><br><span class="line">		if (arr[left] &gt; arr[right]) &#123;</span><br><span class="line">			var temp;</span><br><span class="line">			temp = arr[left];</span><br><span class="line">			arr[left] = arr[right];</span><br><span class="line">			arr[right] = temp;</span><br><span class="line">			flagIndex = flagIndex == left ? right : left;</span><br><span class="line">		&#125;</span><br><span class="line">		if (arr[flagIndex] == arr[left]) &#123;</span><br><span class="line">			right--;</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			left++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	quickSort(arr, a, flagIndex-1);</span><br><span class="line">	quickSort(arr, flagIndex+1, b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://paulwing.github.io/2018/08/10/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95js%E5%AE%9E%E7%8E%B0%EF%BC%88%E5%8F%8C%E8%B7%AF%E5%BF%AB%E6%8E%92%EF%BC%89/" data-id="cl9kax4wq0004vsgph8xq6vr3" data-title="快速排序算法js实现（双路快排）" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/" rel="tag">js</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/08/10/hello-world/" class="article-date">
+  <time class="dt-published" datetime="2018-08-09T19:35:16.000Z" itemprop="datePublished">2018-08-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2018/08/10/hello-world/">Hello World</a>
     </h1>
   
 
@@ -114,10 +258,70 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://paulwing.github.io/2022/10/23/hello-world/" data-id="cl9k8cg1x0000ctgphg6f7vmp" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="https://paulwing.github.io/2018/08/10/hello-world/" data-id="cl9kax4wf0000vsgpanl675p1" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/other/" rel="tag">other</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-对一道头条面试题的个人理解（await、promise、setTimeout等）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/05/30/%E5%AF%B9%E4%B8%80%E9%81%93%E5%A4%B4%E6%9D%A1%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9A%84%E4%B8%AA%E4%BA%BA%E7%90%86%E8%A7%A3%EF%BC%88await%E3%80%81promise%E3%80%81setTimeout%E7%AD%89%EF%BC%89/" class="article-date">
+  <time class="dt-published" datetime="2018-05-30T07:22:16.000Z" itemprop="datePublished">2018-05-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2018/05/30/%E5%AF%B9%E4%B8%80%E9%81%93%E5%A4%B4%E6%9D%A1%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9A%84%E4%B8%AA%E4%BA%BA%E7%90%86%E8%A7%A3%EF%BC%88await%E3%80%81promise%E3%80%81setTimeout%E7%AD%89%EF%BC%89/">对一道头条面试题的个人理解（await、promise、setTimeout等）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">async function async1()&#123;</span><br><span class="line">    console.log(&#x27;async1 start&#x27;)</span><br><span class="line">    await async2()</span><br><span class="line">    console.log(&#x27;async1 end&#x27;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">async function async2()&#123;</span><br><span class="line">    console.log(&#x27;async2&#x27;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(&#x27;script start&#x27;)</span><br><span class="line"></span><br><span class="line">setTimeout(function()&#123;</span><br><span class="line">    console.log(&#x27;setTimeout&#x27;)</span><br><span class="line">&#125;,0) </span><br><span class="line"></span><br><span class="line">async1();</span><br><span class="line"></span><br><span class="line">new Promise(function(resolve)&#123;</span><br><span class="line">    console.log(&#x27;promise1&#x27;)</span><br><span class="line">    resolve();</span><br><span class="line">&#125;).then(function()&#123;</span><br><span class="line">    console.log(&#x27;promise2&#x27;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">console.log(&#x27;script end&#x27;)</span><br></pre></td></tr></table></figure>
+<p>先输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">script start  </span><br><span class="line">async1 start  </span><br><span class="line">async2</span><br></pre></td></tr></table></figure>
+<p>至此，函数async2执行完成，返回一个promise对象（但由于await的异步机制，该对象的resolve()作为微任务进入异步队列），async1直接跳出，继续输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">promise1  </span><br><span class="line">script end</span><br></pre></td></tr></table></figure>
+<p>（注：输出’promise1’后执行resolve，向微任务队列增加一个异步事件console.log(‘promise2’)，此时微任务队列中存了两个事件）</p>
+<p>至此，同步任务全部完成，js引擎空闲，开始轮询异步事件队列，首先取到的是微任务队列中的第一个任务：async2返回的那个promise对象的resolve()，执行该任务，对应的promise对象的状态变为Resolved，于是又向微任务队列中增加一个事件（也就是第三个任务）：promise.then()，而这个then执行的就是async1中后续代码，即本例中 console.log(‘async1 end’)；接着取微任务队列中第二个任务：console.log(‘promise2’)，并执行，输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">promise2</span><br></pre></td></tr></table></figure>
+<p>接着取第三个任务，并执行，输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">async1 end</span><br></pre></td></tr></table></figure>
+<p>至此，微任务队列清空，接着执行宏任务，即setTimeout，输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setTimeout</span><br></pre></td></tr></table></figure>
+<p>综上，结果为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">script start  </span><br><span class="line">async1 start  </span><br><span class="line">async2  </span><br><span class="line">promise1  </span><br><span class="line">script end  </span><br><span class="line">promise2  </span><br><span class="line">async1 end  </span><br><span class="line">setTimeout</span><br></pre></td></tr></table></figure>
+<p>有待深究处：await后的表达式，返回的promise对象的状态改变时机（也就是执行resolve()时机，网上有种说法是“await表达式返回的promise对象的解析行为”），为什么是微任务，而不是直接执行resolve()（也就是紧跟本例中“console.log(‘async2’)”之后）。</p>
+<p>20180810补充：<br>纯node环境，最新测试结果如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">script start  </span><br><span class="line">async1 start  </span><br><span class="line">async2  </span><br><span class="line">promise1  </span><br><span class="line">script end</span><br><span class="line">async1 end</span><br><span class="line">promise2</span><br><span class="line">setTimeout</span><br></pre></td></tr></table></figure>
+<p>原因未知，貌似v8内核中并无macrotask的概念，macrotask是在浏览器环境手动实现的，可能与此有关……</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://paulwing.github.io/2018/05/30/%E5%AF%B9%E4%B8%80%E9%81%93%E5%A4%B4%E6%9D%A1%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9A%84%E4%B8%AA%E4%BA%BA%E7%90%86%E8%A7%A3%EF%BC%88await%E3%80%81promise%E3%80%81setTimeout%E7%AD%89%EF%BC%89/" data-id="cl9kax4wp0003vsgpeu52cknu" data-title="对一道头条面试题的个人理解（await、promise、setTimeout等）" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
+
     </footer>
   </div>
   
@@ -136,15 +340,29 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/other/" rel="tag">other</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/" rel="tag">webpack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BC%96%E8%AF%91/" rel="tag">编译</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/other/" style="font-size: 10px;">other</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 20px;">前端</a> <a href="/tags/%E7%BC%96%E8%AF%91/" style="font-size: 10px;">编译</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li></ul>
     </div>
   </div>
 
@@ -157,7 +375,23 @@
       <ul>
         
           <li>
-            <a href="/2022/10/23/hello-world/">Hello World</a>
+            <a href="/2022/10/23/%E5%AF%B9webpack%E7%9A%84%E5%87%A0%E4%B8%AA%E6%A6%82%E5%BF%B5%E7%9A%84%E7%9B%B4%E8%A7%82%E7%90%86%E8%A7%A3/">对webpack的几个概念的直观理解</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/21/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E9%9B%B6%E5%AE%BD%E6%96%AD%E8%A8%80%E7%9B%B8%E5%85%B3%E7%90%86%E8%A7%A3/">正则表达式零宽断言相关理解</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/10/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95js%E5%AE%9E%E7%8E%B0%EF%BC%88%E5%8F%8C%E8%B7%AF%E5%BF%AB%E6%8E%92%EF%BC%89/">快速排序算法js实现（双路快排）</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/10/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/30/%E5%AF%B9%E4%B8%80%E9%81%93%E5%A4%B4%E6%9D%A1%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9A%84%E4%B8%AA%E4%BA%BA%E7%90%86%E8%A7%A3%EF%BC%88await%E3%80%81promise%E3%80%81setTimeout%E7%AD%89%EF%BC%89/">对一道头条面试题的个人理解（await、promise、setTimeout等）</a>
           </li>
         
       </ul>
@@ -173,7 +407,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       
-      &copy; 2022 paul_wing<br>
+      &copy; 2022 张弛有度<br>
       Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
