@@ -6,15 +6,15 @@
   
   <title>对webpack的几个概念的直观理解 | 启式空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="loader：将各类型的文件转为webpack能处理的有效模块（module） plugin：处理范围更广的任务，例如打包优化、压缩等 module：程序的离散功能块，一个文件对应一个module chunk：若干module打成的包，对应入口文件，一般生成一个文件 compiler：创建compilation，启动编译并生成最终js，并监测文件系统的变化，核心方法如下： 123runcompil">
+  <meta name="description" content="loader：将各类型的文件转为webpack能处理的有效模块（module） plugin：处理范围更广的任务，例如打包优化、压缩等 module：程序的离散功能块，一个文件对应一个module">
 <meta property="og:type" content="article">
 <meta property="og:title" content="对webpack的几个概念的直观理解">
 <meta property="og:url" content="https://paulwing.github.io/2022/10/23/%E5%AF%B9webpack%E7%9A%84%E5%87%A0%E4%B8%AA%E6%A6%82%E5%BF%B5%E7%9A%84%E7%9B%B4%E8%A7%82%E7%90%86%E8%A7%A3/index.html">
 <meta property="og:site_name" content="启式空间">
-<meta property="og:description" content="loader：将各类型的文件转为webpack能处理的有效模块（module） plugin：处理范围更广的任务，例如打包优化、压缩等 module：程序的离散功能块，一个文件对应一个module chunk：若干module打成的包，对应入口文件，一般生成一个文件 compiler：创建compilation，启动编译并生成最终js，并监测文件系统的变化，核心方法如下： 123runcompil">
+<meta property="og:description" content="loader：将各类型的文件转为webpack能处理的有效模块（module） plugin：处理范围更广的任务，例如打包优化、压缩等 module：程序的离散功能块，一个文件对应一个module">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-10-22T16:23:46.000Z">
-<meta property="article:modified_time" content="2022-10-22T19:54:29.496Z">
+<meta property="article:modified_time" content="2022-11-05T19:00:06.115Z">
 <meta property="article:author" content="张弛有度">
 <meta property="article:tag" content="前端">
 <meta property="article:tag" content="webpack">
@@ -105,6 +105,7 @@
         <p>loader：将各类型的文件转为webpack能处理的有效模块（module）</p>
 <p>plugin：处理范围更广的任务，例如打包优化、压缩等</p>
 <p>module：程序的离散功能块，一个文件对应一个module</p>
+<span id="more"></span>
 <p>chunk：<font color="red">若干module打成的包</font>，对应入口文件，一般生成一个文件</p>
 <p>compiler：创建compilation，启动编译并生成最终js，并监测文件系统的变化，核心方法如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">run</span><br><span class="line">compile</span><br><span class="line">emitAssets</span><br></pre></td></tr></table></figure>
@@ -115,7 +116,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://paulwing.github.io/2022/10/23/%E5%AF%B9webpack%E7%9A%84%E5%87%A0%E4%B8%AA%E6%A6%82%E5%BF%B5%E7%9A%84%E7%9B%B4%E8%A7%82%E7%90%86%E8%A7%A3/" data-id="cla4a654000018ygp5l0y5rgm" data-title="对webpack的几个概念的直观理解" class="article-share-link">Share</a>
+      <a data-url="https://paulwing.github.io/2022/10/23/%E5%AF%B9webpack%E7%9A%84%E5%87%A0%E4%B8%AA%E6%A6%82%E5%BF%B5%E7%9A%84%E7%9B%B4%E8%A7%82%E7%90%86%E8%A7%A3/" data-id="cla4bsp58000119gp6esr5o4e" data-title="对webpack的几个概念的直观理解" class="article-share-link">Share</a>
       
       
       
