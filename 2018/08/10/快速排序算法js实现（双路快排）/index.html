@@ -101,14 +101,14 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <blockquote>
-<center><font size=5>代码如下</font></center>
+<center><font size="5">代码如下</font></center>
 </blockquote>
 <hr>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">function quickSort(arr, a, b)&#123;</span><br><span class="line">	var left = a,right = b;</span><br><span class="line">	var flagIndex = left;</span><br><span class="line">	if (a &gt;= b) &#123;</span><br><span class="line">		return;</span><br><span class="line">	&#125;</span><br><span class="line">	while (left &lt; right) &#123;</span><br><span class="line">		if (arr[left] &gt; arr[right]) &#123;</span><br><span class="line">			var temp;</span><br><span class="line">			temp = arr[left];</span><br><span class="line">			arr[left] = arr[right];</span><br><span class="line">			arr[right] = temp;</span><br><span class="line">			flagIndex = flagIndex == left ? right : left;</span><br><span class="line">		&#125;</span><br><span class="line">		if (arr[flagIndex] == arr[left]) &#123;</span><br><span class="line">			right--;</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			left++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	quickSort(arr, a, flagIndex-1);</span><br><span class="line">	quickSort(arr, flagIndex+1, b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://paulwing.github.io/2018/08/10/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95js%E5%AE%9E%E7%8E%B0%EF%BC%88%E5%8F%8C%E8%B7%AF%E5%BF%AB%E6%8E%92%EF%BC%89/" data-id="cla48c8cw00049qgpc2152wn2" data-title="快速排序算法js实现（双路快排）" class="article-share-link">Share</a>
+      <a data-url="https://paulwing.github.io/2018/08/10/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95js%E5%AE%9E%E7%8E%B0%EF%BC%88%E5%8F%8C%E8%B7%AF%E5%BF%AB%E6%8E%92%EF%BC%89/" data-id="cla49ugo30004x4gp5n8n9aud" data-title="快速排序算法js实现（双路快排）" class="article-share-link">Share</a>
       
       
       
